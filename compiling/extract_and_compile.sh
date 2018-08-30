@@ -1,11 +1,11 @@
 #!/bin/bash
 
 NUMBER=$1
-DIRECTORY=$2
+DIR=$2
 
-tar -xzvf NthPrime.tgz -C /tmp/$DIRECTORY
+tar -xzf NthPrime.tgz -C $DIR
 
-cd /tmp/$DIRECTORY
+cd $DIR/NthPrime/
 
 gcc main.c nth_prime.h nth_prime.c -o NthPrime
 
