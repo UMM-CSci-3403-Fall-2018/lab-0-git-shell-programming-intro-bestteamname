@@ -7,8 +7,6 @@ tar -xzf $TARCHIVE -C $SCRATCH_DIR
 
 INNER_DIR=${TARCHIVE%.*}
 
-#delete_files=(`grep --files-with-matches 'DELETE ME!' $SCRATCH_DIR/$INNER_DIR/*`)
-
 rm `grep --files-with-matches 'DELETE ME!' $SCRATCH_DIR/$INNER_DIR/*`
 
 here=$(pwd)
