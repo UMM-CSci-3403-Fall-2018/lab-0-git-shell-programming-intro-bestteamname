@@ -1,0 +1,6 @@
+#!/bin/bash
+
+TARCHIVE=$1
+SCRATCH_DIR=$2
+
+tar -xzf $TARCHIVE -C $SCRATCH_DIR
