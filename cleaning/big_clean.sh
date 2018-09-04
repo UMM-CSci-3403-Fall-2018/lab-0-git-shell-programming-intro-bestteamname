@@ -11,10 +11,8 @@ INNER_DIR=${TARCHIVE%.*}
 
 rm `grep --files-with-matches 'DELETE ME!' $SCRATCH_DIR/$INNER_DIR/*`
 
-#for file in $SCRATCH_DIR/$INNER_DIR/*; do
-#	match_string=`grep --files-with-matches 'DELETE ME!' $file`
-#	if [ ! -z $match_string ]
-#	then
-#		rm $file
-#	fi
-#done
+here=$(pwd)
+
+cd $SCRATCH_DIR
+
+tar -czf $here/cleaned_$TARCHIVE $INNER_DIR
